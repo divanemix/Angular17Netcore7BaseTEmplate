@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="Hello Card">
+      <!--parentIdExpr="category"-->
+
+      <dx-tree-list id="articlesTree"
+                    [dataSource]="articlesDataSource"
+                    rootValue=""
+                    keyExpr="articleId"
+                    [showRowLines]="true"
+                    [showBorders]="true"
+                    [columnAutoWidth]="true"
+                    [expandedRowKeys]="[1]"
+                    (onEditorPreparing)="editorPreparing($event)"
+                    (onInitNewRow)="initNewRow($event)">
+
+        <dxo-editing mode="popup"
+                     [allowUpdating]="true"
+                     [allowDeleting]="allowDeleting"
+                     [allowAdding]="true">
+          <dxo-popup title="Article" [showTitle]="true" [width]="500">
+          </dxo-popup>
+        </dxo-editing>
+        <dxo-filter-row [visible]="true"></dxo-filter-row>
+        <dxo-selection mode="single"></dxo-selection>
+        <dxi-column dataField="name" caption="Name"></dxi-column>
+        <dxi-column dataField="partNumber"></dxi-column>
+        <dxi-column dataField="note"></dxi-column>
+        <dxi-column dataField="category"></dxi-column>
+        <dxi-column dataField="subCategory1"></dxi-column>
+        <dxi-column dataField="subCategory2"></dxi-column>
+        <dxi-column dataField="subCategory3"></dxi-column>
+        <dxi-column dataField="shelf"></dxi-column>
+        <dxi-column dataField="box"></dxi-column>
+        <dxi-column dataField="tag"></dxi-column>
+        <dxi-column dataField="quantity"></dxi-column>
+        <dxi-column dataField="cost"></dxi-column>
+        <dxi-column dataField="price"></dxi-column>
+
+
+      </dx-tree-list>
+
+    </app-card>
+  </div>
+</div>

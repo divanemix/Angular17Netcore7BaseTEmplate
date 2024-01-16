@@ -1,0 +1,2 @@
+SCAFOLDING STRING :dotnet ef dbcontext scaffold "Server=myServerAddress;Port=myPort;Database=myDatabase;User=myUsername;Password=myPassword;" Pomelo.EntityFrameworkCore.MySql -o Models
+

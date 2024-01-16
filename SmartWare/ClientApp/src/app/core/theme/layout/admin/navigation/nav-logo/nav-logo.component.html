@@ -1,0 +1,17 @@
+<div class="">
+  <a [routerLink]="['/dashboard/default/']" class="b-brand">
+    <div>
+      <!--<i class="feather icon-trending-up"></i>-->
+      <img src="assets/smartware.ico"/>
+    </div>
+    <span class="b-title" style="font-weight:bolder">Samrt Ware</span>
+  </a>
+  <a
+    href="javascript:"
+    class="mobile-menu"
+    [ngClass]="{ on: navCollapsed }"
+    id="mobile-collapse"
+    (click)="navCollapse()"
+    ><span></span
+  ></a>
+</div>
